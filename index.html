@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trang vinh danh thành tích nội bộ theo tháng."
+    />
+    <title>Gương sáng nội bộ</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#noi-dung">Đi đến nội dung chính</a>
+
+    <header class="site-header">
+      <a class="brand" href="#trang-chu" aria-label="Về trang chủ">
+        <span class="brand-mark" aria-hidden="true">光</span>
+        <span>
+          <strong>GƯƠNG SÁNG</strong>
+          <small>VINH DANH NỘI BỘ</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        Menu
+      </button>
+
+      <nav id="mainNav" aria-label="Điều hướng chính">
+        <a href="#trang-chu">Trang chủ</a>
+        <a href="#guong-sang">Gương sáng</a>
+        <a href="#tieu-chi">Tiêu chí</a>
+        <a href="#luu-tru">Lưu trữ</a>
+      </nav>
+    </header>
+
+    <main id="noi-dung">
+      <section class="hero" id="trang-chu">
+        <div class="hero-copy">
+          <div class="month-seal" aria-hidden="true">月</div>
+          <p class="eyebrow">CHƯƠNG TRÌNH VINH DANH HẰNG THÁNG</p>
+          <h1>Mỗi tháng,<br />những gương sáng</h1>
+          <span class="brush-line" aria-hidden="true"></span>
+          <p class="hero-description">
+            Mỗi tháng, 3–5 cá nhân hoặc đội nhóm được tôn vinh vì những đóng góp
+            tích cực trong công việc, quản lý bộ phận, 3Q6S và giao tiếp.
+          </p>
+          <a class="primary-link" href="#guong-sang">
+            Xem gương sáng tháng này <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            src="assets/recognition-symbol-hero.png"
+            alt="Biểu tượng vinh danh và phát triển trong môi trường sản xuất"
+          />
+          <div class="vertical-label" aria-hidden="true">月間表彰</div>
+          <div class="hero-caption">
+            <div>
+              <span>CHƯƠNG TRÌNH GHI NHẬN NỘI BỘ</span>
+              <strong>Cùng nhau tiến bộ</strong>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="recognition-section section-shell" id="guong-sang">
+        <div class="section-heading">
+          <div>
+            <p class="section-index" id="monthKicker">01 — GƯƠNG SÁNG</p>
+            <h2 id="monthTitle">Gương sáng tháng 07/2026</h2>
+          </div>
+          <p class="section-intro">
+            Chọn từng thành viên để xem ảnh bảng ghi nhận của cá nhân hoặc đội
+            nhóm trong tháng.
+          </p>
+        </div>
+
+        <div class="member-tabs" id="memberTabs" aria-label="Danh sách gương sáng">
+        </div>
+
+        <article class="recognition-view" id="recognitionView" aria-live="polite">
+        </article>
+      </section>
+
+      <section class="criteria-section" id="tieu-chi">
+        <div class="section-shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-index">02 — TIÊU CHÍ VINH DANH</p>
+              <h2>Bốn nhóm tiêu chí,<br />mười sáu nội dung đánh giá.</h2>
+            </div>
+            <p class="section-intro">
+              Thành tích được ghi nhận dựa trên hành động cụ thể, bằng chứng rõ
+              ràng và tác động tích cực đối với công việc hoặc đội ngũ.
+            </p>
+          </div>
+
+          <div class="criteria-grid" id="criteriaGrid"></div>
+        </div>
+      </section>
+
+      <section class="archive-section section-shell" id="luu-tru">
+        <div class="section-heading">
+          <div>
+            <p class="section-index">03 — DẤU ẤN MỖI THÁNG</p>
+            <h2>Mỗi tháng,<br />một câu chuyện đáng lan tỏa.</h2>
+          </div>
+          <p class="section-intro">
+            Chọn một tháng để xem số lượng và danh sách thành viên đã được vinh
+            danh.
+          </p>
+        </div>
+
+        <div class="archive-list" id="archiveList"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">光</span>
+          <p>
+            <strong>GƯƠNG SÁNG NỘI BỘ</strong>
+            <small>Ghi nhận đúng lúc · Lan tỏa điều tích cực</small>
+          </p>
+        </div>
+        <a href="#trang-chu">Trở về đầu trang ↑</a>
+      </div>
+    </footer>
+
+    <dialog class="image-dialog" id="imageDialog">
+      <button id="closeDialog" type="button" aria-label="Đóng ảnh">×</button>
+      <img id="dialogImage" src="" alt="" />
+    </dialog>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
