@@ -44,58 +44,64 @@ window.RECOGNITION_DATA = {
         }
       ]
     },
+
     {
       slug: "2026-06",
       month: "06",
       year: "2026",
-      title: "Gương sáng tháng 06/2026",
+      title: "Gương sáng tháng 06/2026 (chưa có)",
       members: [
         {
-          id: "tran-thi-lan-06",
-          initials: "TL",
-          name: "Trần Thị Lan",
-          department: "QA",
-          meta: "QA · Chất lượng",
-          achievement: "Chuẩn hóa check sheet, giảm 32% lỗi ghi nhận.",
-          boardImage: ""
-        }
-      ]
-    },
-    {
-      slug: "2026-05",
-      month: "05",
-      year: "2026",
-      title: "Gương sáng tháng 05/2026",
-      members: [
-        {
-          id: "le-hoang-phuc-05",
-          initials: "HP",
-          name: "Lê Hoàng Phúc",
-          department: "BẢO TRÌ",
-          meta: "Bảo trì · An toàn",
-          achievement: "Thiết kế cảnh báo trực quan tại 8 điểm rủi ro.",
-          boardImage: ""
-        }
-      ]
-    },
-    {
-      slug: "2026-04",
-      month: "04",
-      year: "2026",
-      title: "Gương sáng tháng 04/2026",
-      members: [
-        {
-          id: "nhom-kho-thanh-pham-04",
-          initials: "KT",
-          name: "Nhóm Kho thành phẩm",
-          department: "LOGISTICS",
-          meta: "Logistics · Hợp tác",
-          achievement: "Rút ngắn 21 phút cho mỗi lượt xuất hàng.",
+          id: "",
+          initials: "",
+          name: "",
+          department: "",
+          meta: "",
+          achievement: "",
           boardImage: ""
         }
       ]
     }
   ],
+
+    {
+      slug: "2026-05",
+      month: "05",
+      year: "2026",
+      title: "Gương sáng tháng 05/2026 (chưa có)",
+      members: [
+        {
+          id: "",
+          initials: "",
+          name: "",
+          department: "",
+          meta: "",
+          achievement: "",
+          boardImage: ""
+        }
+      ]
+    }
+  ],
+
+    {
+      slug: "2026-04",
+      month: "04",
+      year: "2026",
+      title: "Gương sáng tháng 04/2026 (chưa có)",
+      members: [
+        {
+          id: "",
+          initials: "",
+          name: "",
+          department: "",
+          meta: "",
+          achievement: "",
+          boardImage: ""
+        }
+      ]
+    }
+  ],
+
 
   criteria: [
     {
