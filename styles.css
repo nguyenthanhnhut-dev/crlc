@@ -1045,3 +1045,24 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* FONT TIẾNG VIỆT CHO TOÀN WEBSITE */
+body {
+  font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.hero-caption strong,
+.member-tab strong,
+.recognition-summary h3,
+.criterion-card summary strong,
+.empty-board strong,
+.archive-date strong,
+.archive-count strong,
+.archive-names strong {
+  font-family: "Noto Serif", "Times New Roman", serif !important;
+  font-kerning: normal;
+  letter-spacing: 0 !important;
+}
