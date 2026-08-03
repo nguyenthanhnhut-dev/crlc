@@ -64,45 +64,7 @@ window.RECOGNITION_DATA = {
     }
   ],
 
-    {
-      slug: "2026-05",
-      month: "05",
-      year: "2026",
-      title: "Gương sáng tháng 05/2026 (chưa có)",
-      members: [
-        {
-          id: "",
-          initials: "",
-          name: "",
-          department: "",
-          meta: "",
-          achievement: "",
-          boardImage: ""
-        }
-      ]
-    }
-  ],
-
-    {
-      slug: "2026-04",
-      month: "04",
-      year: "2026",
-      title: "Gương sáng tháng 04/2026 (chưa có)",
-      members: [
-        {
-          id: "",
-          initials: "",
-          name: "",
-          department: "",
-          meta: "",
-          achievement: "",
-          boardImage: ""
-        }
-      ]
-    }
-  ],
-
-
+   
   criteria: [
     {
       number: "01",
