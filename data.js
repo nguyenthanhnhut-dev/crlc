@@ -22,7 +22,7 @@ window.RECOGNITION_DATA = {
           department: "JIG / XUẤT NHẬP HÀNG",
           meta: "JIG/Xuất nhập hàng · Cải tiến Kaizen",
           achievement: "Chủ động học và đạt chứng chỉ vận hành xe nâng, trực tiếp vận chuyển hàng ra xe tải, giảm phụ thuộc vào nhân sự hỗ trợ và rút ngắn thời gian chờ khi giao hàng.",
-          boardImage: "assets/recognition/2026-07/le-thi-thuy-hang.png"
+          boardImage: "assets/recognition/2026-07/le-thi-thuy-hang.webp"
         },
         {
           id: "pham-vu-khanh",
@@ -31,7 +31,7 @@ window.RECOGNITION_DATA = {
           department: "JIG / DÂY CHUYỀN LẮP RÁP",
           meta: "JIG/Dây chuyền lắp ráp · Cải tiến Kaizen",
           achievement: "Thiết kế và chế tạo gá hỗ trợ có thể xoay 180°, rút ngắn thời gian lắp ráp từ 7 phút xuống 3,5 phút, giảm mệt mỏi và hạn chế trầy xước sản phẩm.",
-          boardImage: "assets/recognition/2026-07/pham-vu-khanh.png"
+          boardImage: "assets/recognition/2026-07/pham-vu-khanh.webp"
         },
         {
           id: "phan-van-len",
@@ -40,7 +40,7 @@ window.RECOGNITION_DATA = {
           department: "ĐIỆN PHÂN",
           meta: "Điện phân · Cải tiến Kaizen",
           achievement: "Chế tạo và áp dụng JIG cho các mã hàng lặp lại, rút ngắn khoảng 50% thời gian thao tác gắn xuống, đồng thời bảo đảm an toàn và hạn chế trầy xước sản phẩm.",
-          boardImage: "assets/recognition/2026-07/phan-van-len.png"
+          boardImage: "assets/recognition/2026-07/phan-van-len.webp"
         }
       ]
     },
@@ -49,18 +49,8 @@ window.RECOGNITION_DATA = {
       slug: "2026-06",
       month: "06",
       year: "2026",
-      title: "Gương sáng tháng 06/2026 (chưa có)",
-      members: [
-        {
-          id: "",
-          initials: "",
-          name: "",
-          department: "",
-          meta: "",
-          achievement: "",
-          boardImage: ""
-        }
-      ]
+      title: "Gương sáng tháng 06/2026",
+      members: []
     }
   ],
 

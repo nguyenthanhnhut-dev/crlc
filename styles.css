@@ -1,10 +1,13 @@
 :root {
-  --paper: #f4f0e7;
-  --paper-light: #fbf8f1;
-  --ink: #171411;
-  --charcoal: #3d3730;
-  --warm-gray: #7a7167;
+  --paper: #f6f2ea;
+  --paper-light: #fcfaf6;
+  --ink: #201d1a;
+  --charcoal: #3c3732;
+  --warm-gray: #655e56;
   --line: rgba(23, 20, 17, 0.2);
+  --brand-blue: #0b5cab;
+  --brand-blue-dark: #07457f;
+  --brand-blue-soft: #eaf3fc;
   --vermilion: #c83b2c;
   --vermilion-dark: #9f2c22;
   --shadow: 0 18px 50px rgba(45, 36, 27, 0.12);
@@ -31,7 +34,8 @@ body {
     ),
     var(--paper);
   color: var(--ink);
-  font-family: "Segoe UI", "Noto Sans", Arial, sans-serif;
+  font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
 }
 
 body,
@@ -51,6 +55,11 @@ a {
 
 button {
   font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(11, 92, 171, 0.35);
+  outline-offset: 3px;
 }
 
 img {
@@ -80,7 +89,7 @@ img {
   position: relative;
   z-index: 20;
   display: flex;
-  width: min(1240px, calc(100% - 64px));
+  width: min(1200px, calc(100% - 64px));
   height: 86px;
   margin: 0 auto;
   align-items: center;
@@ -92,6 +101,14 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.brand-logo {
+  display: block;
+  width: 64px;
+  height: 40px;
+  flex: 0 0 64px;
+  object-fit: contain;
 }
 
 .brand-mark {
@@ -119,7 +136,7 @@ img {
 .brand small {
   margin-top: 3px;
   color: var(--warm-gray);
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   letter-spacing: 0.16em;
 }
 
@@ -144,7 +161,7 @@ nav a::after {
   bottom: -1px;
   left: 0;
   height: 2px;
-  background: var(--vermilion);
+  background: var(--brand-blue);
   content: "";
   transform: scaleX(0);
   transition: transform 180ms ease;
@@ -167,7 +184,7 @@ nav a:focus-visible::after {
 
 .hero {
   display: grid;
-  width: min(1240px, calc(100% - 64px));
+  width: min(1200px, calc(100% - 64px));
   min-height: 610px;
   margin: 0 auto;
   grid-template-columns: 47% 53%;
@@ -197,24 +214,27 @@ nav a:focus-visible::after {
 .section-index,
 .recognition-number {
   margin: 0;
-  color: var(--vermilion);
-  font-size: 0.7rem;
+  color: var(--brand-blue);
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.18em;
 }
 
 h1,
-h2,
-h3 {
-  font-family: Georgia, "Times New Roman", "Noto Serif", serif;
+h2 {
+  font-family: "Noto Serif", "Times New Roman", serif;
   font-weight: 500;
+}
+
+h3 {
+  font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
 }
 
 h1 {
   margin: 18px 0 0;
-  font-size: clamp(3.7rem, 6vw, 6rem);
-  letter-spacing: -0.055em;
-  line-height: 0.94;
+  font-size: clamp(3.25rem, 5.2vw, 4.75rem);
+  letter-spacing: -0.035em;
+  line-height: 1.05;
 }
 
 .brush-line {
@@ -241,7 +261,7 @@ h1 {
   justify-content: space-between;
   gap: 24px;
   padding: 16px 19px;
-  background: var(--vermilion);
+  background: var(--brand-blue);
   color: white;
   font-weight: 700;
   transition:
@@ -251,7 +271,7 @@ h1 {
 
 .primary-link:hover,
 .primary-link:focus-visible {
-  background: var(--vermilion-dark);
+  background: var(--brand-blue-dark);
   transform: translateY(-2px);
 }
 
@@ -289,13 +309,17 @@ h1 {
   z-index: 2;
   top: 28px;
   right: 25px;
-  padding: 10px 7px;
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  color: white;
-  font-family: "Yu Mincho", "MS Mincho", serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.24em;
+  padding: 12px 8px;
+  border: 1px solid rgba(11, 92, 171, 0.45);
+  background: rgba(246, 242, 234, 0.9);
+  box-shadow: 0 8px 24px rgba(7, 69, 127, 0.16);
+  color: var(--brand-blue-dark);
+  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   writing-mode: vertical-rl;
+  backdrop-filter: blur(6px);
 }
 
 .hero-caption {
@@ -318,47 +342,47 @@ h1 {
 
 .hero-caption span {
   margin-bottom: 7px;
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
 }
 
 .hero-caption strong {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Noto Serif", "Times New Roman", serif;
   font-size: 1.55rem;
   font-weight: 500;
 }
 
 .hero-caption p {
   margin: 0;
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   white-space: nowrap;
 }
 
 .section-shell {
-  width: min(1180px, calc(100% - 64px));
+  width: min(1200px, calc(100% - 64px));
   margin: 0 auto;
 }
 
 .recognition-section,
 .archive-section {
-  padding: 112px 0;
+  padding: 88px 0;
 }
 
 .section-heading {
   display: grid;
   align-items: end;
-  margin-bottom: 58px;
+  margin-bottom: 48px;
   grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.65fr);
-  gap: 80px;
+  gap: 64px;
 }
 
 .section-heading h2 {
   max-width: 780px;
   margin: 18px 0 0;
-  font-size: clamp(2.8rem, 5vw, 5.5rem);
-  letter-spacing: -0.045em;
-  line-height: 1;
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 
 .section-intro {
@@ -371,7 +395,7 @@ h1 {
 .member-tabs {
   display: grid;
   margin-bottom: 28px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
@@ -396,11 +420,11 @@ h1 {
 
 .member-tab:hover,
 .member-tab:focus-visible {
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--brand-blue-soft);
 }
 
 .member-tab.active {
-  background: var(--vermilion);
+  background: var(--brand-blue);
   color: white;
 }
 
@@ -410,14 +434,14 @@ h1 {
 }
 
 .member-tab strong {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .member-tab small {
   margin-top: 5px;
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
 }
@@ -430,7 +454,7 @@ h1 {
   place-items: center;
   border: 1px solid currentColor;
   border-radius: 50%;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 800;
 }
 
@@ -438,7 +462,7 @@ h1 {
   display: grid;
   min-height: 480px;
   padding: 30px;
-  grid-template-columns: 29% 71%;
+  grid-template-columns: 36% 64%;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.3);
   box-shadow: var(--shadow);
@@ -450,13 +474,14 @@ h1 {
 
 .recognition-summary h3 {
   margin: 20px 0 10px;
-  font-size: clamp(2rem, 3vw, 3.4rem);
-  line-height: 1.05;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 .recognition-meta {
   margin: 0 0 28px;
-  color: var(--vermilion);
+  color: var(--brand-blue);
   font-size: 0.78rem;
   font-weight: 700;
 }
@@ -471,7 +496,7 @@ h1 {
 .image-note {
   margin: 24px 0 0;
   color: var(--warm-gray);
-  font-size: 0.76rem;
+  font-size: 0.8rem;
 }
 
 .board-button {
@@ -482,6 +507,7 @@ h1 {
   border: 0;
   background: #eae8e4;
   cursor: zoom-in;
+  aspect-ratio: 1123 / 793;
 }
 
 .board-button img {
@@ -497,9 +523,9 @@ h1 {
   right: 14px;
   bottom: 14px;
   padding: 9px 12px;
-  background: rgba(23, 20, 17, 0.88);
+  background: rgba(7, 69, 127, 0.92);
   color: white;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 700;
 }
 
@@ -531,9 +557,18 @@ h1 {
 }
 
 .empty-board strong {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
   font-size: 1.45rem;
-  font-weight: 500;
+  font-weight: 700;
+}
+
+.recognition-view.is-empty {
+  display: block;
+  min-height: 0;
+}
+
+.recognition-view.is-empty .empty-board {
+  min-height: 320px;
 }
 
 .empty-board p {
@@ -545,7 +580,7 @@ h1 {
 }
 
 .criteria-section {
-  padding: 112px 0;
+  padding: 88px 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.18);
@@ -582,7 +617,7 @@ h1 {
 .criterion-number {
   align-self: start;
   color: var(--warm-gray);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
 }
 
 .criterion-symbol {
@@ -602,15 +637,16 @@ h1 {
 }
 
 .criterion-card summary strong {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .criterion-card summary small {
   margin-top: 7px;
-  color: var(--vermilion);
-  font-size: 0.72rem;
+  color: var(--brand-blue);
+  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-size: 0.8rem;
   font-weight: 700;
 }
 
@@ -631,7 +667,7 @@ h1 {
 .criterion-body > p {
   margin: 0 0 20px;
   color: var(--warm-gray);
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   line-height: 1.65;
 }
 
@@ -652,7 +688,7 @@ h1 {
 
 .criterion-item-number {
   color: var(--vermilion);
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   font-weight: 800;
 }
 
@@ -666,13 +702,15 @@ h1 {
 }
 
 .criterion-body li strong {
-  font-size: 0.82rem;
+  font-size: 0.9rem;
 }
 
 .criterion-body li small {
   margin-top: 4px;
-  color: var(--warm-gray);
-  font-size: 0.7rem;
+  color: var(--brand-blue);
+  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
 }
 
 .archive-list {
@@ -700,7 +738,7 @@ h1 {
 }
 
 .archive-row.active {
-  box-shadow: inset 3px 0 0 var(--vermilion);
+  box-shadow: inset 3px 0 0 var(--brand-blue);
 }
 
 .archive-date {
@@ -713,15 +751,15 @@ h1 {
 .archive-date small {
   align-self: center;
   color: var(--warm-gray);
-  font-size: 0.55rem;
+  font-size: 0.72rem;
   letter-spacing: 0.1em;
 }
 
 .archive-date strong {
   grid-row: 1 / span 2;
   grid-column: 2;
-  color: var(--vermilion);
-  font-family: Georgia, "Times New Roman", serif;
+  color: var(--brand-blue);
+  font-family: "Noto Serif", "Times New Roman", serif;
   font-size: 2.7rem;
   font-weight: 500;
   line-height: 0.9;
@@ -729,7 +767,7 @@ h1 {
 
 .archive-date em {
   color: var(--warm-gray);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-style: normal;
 }
 
@@ -740,15 +778,15 @@ h1 {
 }
 
 .archive-count strong {
-  color: var(--vermilion);
-  font-family: Georgia, "Times New Roman", serif;
+  color: var(--brand-blue);
+  font-family: "Noto Serif", "Times New Roman", serif;
   font-size: 2rem;
   font-weight: 500;
 }
 
 .archive-count small {
   color: var(--warm-gray);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   line-height: 1.4;
 }
 
@@ -760,20 +798,20 @@ h1 {
 .archive-names small {
   margin-bottom: 9px;
   color: var(--warm-gray);
-  font-size: 0.6rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
 }
 
 .archive-names strong {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
 .archive-arrow {
-  color: var(--vermilion);
+  color: var(--brand-blue);
   font-size: 1.3rem;
 }
 
@@ -783,7 +821,7 @@ footer {
 
 .footer-inner {
   display: flex;
-  width: min(1180px, calc(100% - 64px));
+  width: min(1200px, calc(100% - 64px));
   min-height: 140px;
   margin: 0 auto;
   align-items: center;
@@ -807,18 +845,18 @@ footer {
 }
 
 .footer-brand strong {
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   letter-spacing: 0.15em;
 }
 
 .footer-brand small {
   margin-top: 6px;
   color: var(--warm-gray);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 
 .footer-inner > a {
-  color: var(--vermilion);
+  color: var(--brand-blue);
   font-size: 0.78rem;
   font-weight: 700;
 }
@@ -946,7 +984,7 @@ footer {
   }
 
   h1 {
-    font-size: clamp(3.35rem, 15vw, 4.7rem);
+    font-size: clamp(2.65rem, 12vw, 3.5rem);
   }
 
   .hero-caption {
@@ -972,7 +1010,7 @@ footer {
   }
 
   .section-heading h2 {
-    font-size: clamp(2.6rem, 13vw, 4rem);
+    font-size: clamp(2.15rem, 10vw, 2.75rem);
   }
 
   .member-tabs {
@@ -1044,25 +1082,4 @@ footer {
   *::after {
     transition-duration: 0.01ms !important;
   }
-}
-
-/* FONT TIẾNG VIỆT CHO TOÀN WEBSITE */
-body {
-  font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
-}
-
-h1,
-h2,
-h3,
-.hero-caption strong,
-.member-tab strong,
-.recognition-summary h3,
-.criterion-card summary strong,
-.empty-board strong,
-.archive-date strong,
-.archive-count strong,
-.archive-names strong {
-  font-family: "Noto Serif", "Times New Roman", serif !important;
-  font-kerning: normal;
-  letter-spacing: 0 !important;
 }

@@ -63,12 +63,25 @@
     var month = getCurrentMonth();
     var member = month.members[state.memberIndex] || month.members[0];
 
+    recognitionView.classList.toggle("is-empty", month.members.length === 0);
+
     monthKicker.textContent =
       "01 — " +
       String(month.members.length).padStart(2, "0") +
       " GƯƠNG SÁNG · THÁNG " +
       month.month;
     monthTitle.textContent = month.title;
+
+    if (!month.members.length) {
+      memberTabs.innerHTML = "";
+      recognitionView.innerHTML =
+        '<div class="empty-board">' +
+        '<span aria-hidden="true">—</span>' +
+        "<strong>Chưa có dữ liệu vinh danh</strong>" +
+        "<p>Tháng này chưa có cá nhân hoặc đội nhóm được cập nhật. Vui lòng quay lại sau.</p>" +
+        "</div>";
+      return;
+    }
 
     memberTabs.innerHTML = month.members
       .map(function (item, index) {
@@ -230,7 +243,7 @@
           .map(function (member) {
             return member.name;
           })
-          .join(" · ");
+          .join(" · ") || "Chưa có dữ liệu";
 
         return (
           '<a class="archive-row' +
